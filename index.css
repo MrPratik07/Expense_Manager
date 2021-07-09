@@ -23,9 +23,10 @@
 
 .item-container{
     display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-    height: 10cm;
+    
+    flex-direction: column;
+    justify-content: space-between;
+    height: 11cm;
 }
 
 .salary{
@@ -60,4 +61,35 @@ hr{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
+}
+
+.add-item-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#salary{
+    margin-left: 20px;
+}
+#item{
+    margin-right: 20px;
+}
+
+.item-name{
+    width: 6cm;
+    height: 1cm;
+    border: 1px solid;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+#name{
+    margin-left: 10px;
+    font-size: medium;
 }
