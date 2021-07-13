@@ -99,10 +99,35 @@ hr{
 
 #salary{
     margin-left: 50px;
+    cursor: pointer;
+}
+
+#salary:hover{
+    transform: scale(1.2);
+    transition: 0.5s;
     
 }
 #item{
     margin-right: 50px;
+    cursor: pointer;
+}
+
+#item:hover{
+    transform: scale(1.2);
+    transition: 0.5s;
+    
+}
+
+#bin-icon{
+    cursor: pointer;
+    
+}
+
+#bin-icon:hover{
+    transform: scale(1.2);
+    transition: 0.1s;
+    color: red
+    
 }
 
 .item-name{
@@ -125,4 +150,28 @@ hr{
 
 #bin-icon{
     margin-right: 10px;
+}
+
+.salary-button-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-button-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+
+.salary-button-text{
+    margin-left: 45px;
+    margin-top: 10px;
+}
+
+.item-button-text{
+    margin-right: 45px;
+    margin-top: 10px;
 }
