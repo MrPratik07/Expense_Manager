@@ -73,7 +73,7 @@ function ItemToDisplay(){
 
     //console.log(itemArray);
 
-    if(sum >= getItemPrice && itemArray.length<4){
+    if(sum != moneyspent && itemArray.length<4){
     ItemBoxContainer.innerHTML= itemArray.map((i)=>{
             
             return  `<div class="item-name">
@@ -94,4 +94,6 @@ function ItemToDisplay(){
     
     
     modalItem.style.display="none";
+    ItemInput.value="";
+    ItemPriceInput.value="";
 }
