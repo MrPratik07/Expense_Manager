@@ -101,6 +101,7 @@ hr{
 #salary{
     margin-left: 50px;
     cursor: pointer;
+    
 }
 
 #salary:hover{
@@ -111,6 +112,7 @@ hr{
 #item{
     margin-right: 50px;
     cursor: pointer;
+    
 }
 
 #item:hover{
@@ -141,6 +143,7 @@ hr{
     align-items: center;
     padding: 5px;
     background-color: aliceblue;
+    margin-top: 5px;
 }
 
 #name{
@@ -175,11 +178,13 @@ hr{
 .salary-button-text{
     margin-left: 45px;
     margin-top: 10px;
+    
 }
 
 .item-button-text{
     margin-right: 45px;
     margin-top: 10px;
+
 }
 
 

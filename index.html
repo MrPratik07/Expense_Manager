@@ -23,11 +23,11 @@
                     <h3>Salary</h3>
                 </div>
                 <div class="spent-money">
-                    <h1>0</h1>
+                    <h1 id="displayMoneySpent">0</h1>
                     <h3>Money Spent</h3>
                 </div>
                 <div class="left-money">
-                    <h1>0</h1>
+                    <h1 id="displayMoneyLeft">0</h1>
                     <h3>Money left</h3>
                 </div>
             </div>
@@ -62,7 +62,7 @@
                               <input type="text" id="item-input"/>
                               <p id="add-item">Add Price</p>
                               <input type="number" id="item-price-input"/>
-                              <button id="add-item-button">Add</button>
+                              <button onclick="ItemToDisplay()" id="add-item-button">Add</button>
                           </div>
                         </div>
                       
@@ -71,12 +71,14 @@
 
 
 
-
-                    <div class="item-name">
+                      <div class="item-box-container">
+                    <!-- <div class="item-name">
                     <h5 id="name">Books</h5>
                     <h5 id="item-price">Rs 50</h5>
                     <i id="bin-icon"class="fas fa-trash-alt"></i>
+                    </div> -->
                     </div>
+                                  
                 </div>
                 <div class="button-container">
                     <div class="salary-button-container">
