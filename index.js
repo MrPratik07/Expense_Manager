@@ -71,7 +71,7 @@ function ItemToDisplay(){
     const getItemPrice= parseInt(ItemPriceInput.value);
     const getSalaryvalue= parseInt(SalaryInput.value);
     const ItemBoxContainer=document.querySelector(".item-box-container");
-    if(getSalaryvalue > getItemPrice){
+    if(getSalaryvalue >= getItemPrice){
 
         ItemBoxContainer.innerHTML= `<div class="item-name">
         <h5 id="name">${getItemName}</h5>
