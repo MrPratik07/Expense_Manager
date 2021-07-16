@@ -146,13 +146,13 @@ hr{
     margin-top: 5px;
 }
 
-#name{
+.name{
     margin-left: 10px;
     margin-top: 25px;
     font-size: medium;
 }
 
-#item-price{
+.item-price{
     margin-top: 25px;
     font-size: medium;
 }

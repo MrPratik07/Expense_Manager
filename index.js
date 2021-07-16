@@ -11,17 +11,7 @@ var displayMoneySpent=document.getElementById("displayMoneySpent");
 var displayMoneyLeft=document.getElementById("displayMoneyLeft");
 
 
-// const itemArray=[
-//         {
-//             itemname:"Books",
-//             itemprice:50        
-//         }
-// ];
-
-
-
-
-
+const itemArray=[];
 
 
 window.onclick = function(event) {
@@ -49,13 +39,13 @@ function removeModalItem(){
 }
 
 function AddSalary(){
-    console.log("Add salary")
+    //console.log("Add salary")
     modalSalary.style.display = "block";
 }
 
 
 function AddItem(){
-    console.log("Add Item")
+    //console.log("Add Item")
     modalItem.style.display = "block";
 }
 
@@ -71,17 +61,32 @@ function ItemToDisplay(){
     const getItemPrice= parseInt(ItemPriceInput.value);
     const getSalaryvalue= parseInt(SalaryInput.value);
     const ItemBoxContainer=document.querySelector(".item-box-container");
-    if(getSalaryvalue >= getItemPrice){
+    var data={
+        name:getItemName,
+        price:getItemPrice
+    }
 
-        ItemBoxContainer.innerHTML= `<div class="item-name">
-        <h5 id="name">${getItemName}</h5>
-        <h5 id="item-price">Rs ${getItemPrice}</h5>
-        <i id="bin-icon"class="fas fa-trash-alt"></i>
-        </div>`
+    itemArray.push(data);
+
+
+    //console.log(itemArray);
+
+    if(getSalaryvalue >= getItemPrice && itemArray.length<4){
+    ItemBoxContainer.innerHTML=
+    
+        itemArray.map((i)=>{
+            return  `<div class="item-name">
+            <h5 class="name">${i.name}</h5>
+            <h5 class="item-price">Rs ${i.price}</h5>
+            <i id="bin-icon"class="fas fa-trash-alt"></i>
+            </div>`
+     
+        })
+        //ItemBoxContainer.innerHTML= 
         displayMoneySpent.innerText=getItemPrice;
         displayMoneyLeft.innerText=getSalaryvalue-getItemPrice;
     }else{
-        alert("You Dont Have Enough Salary to Buy Item")
+        alert("You Cant add a item to list")
     }
     
     
