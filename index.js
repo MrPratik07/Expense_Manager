@@ -12,7 +12,7 @@ var displayMoneyLeft=document.getElementById("displayMoneyLeft");
 
 
 const itemArray=[];
-
+var moneyspent=0;
 
 window.onclick = function(event) {
     if (event.target == modalSalary){
@@ -56,6 +56,7 @@ function SalaryToDisplay(){
 
 }
 
+
 function ItemToDisplay(){
     const getItemName=ItemInput.value;
     const getItemPrice= parseInt(ItemPriceInput.value);
@@ -68,13 +69,13 @@ function ItemToDisplay(){
 
     itemArray.push(data);
 
+    var sum=getSalaryvalue;
 
     //console.log(itemArray);
 
-    if(getSalaryvalue >= getItemPrice && itemArray.length<4){
-    ItemBoxContainer.innerHTML=
-    
-        itemArray.map((i)=>{
+    if(sum >= getItemPrice && itemArray.length<4){
+    ItemBoxContainer.innerHTML= itemArray.map((i)=>{
+            
             return  `<div class="item-name">
             <h5 class="name">${i.name}</h5>
             <h5 class="item-price">Rs ${i.price}</h5>
@@ -82,11 +83,13 @@ function ItemToDisplay(){
             </div>`
      
         })
-        //ItemBoxContainer.innerHTML= 
-        displayMoneySpent.innerText=getItemPrice;
-        displayMoneyLeft.innerText=getSalaryvalue-getItemPrice;
-    }else{
-        alert("You Cant add a item to list")
+        
+        moneyspent+=getItemPrice
+        displayMoneySpent.innerText=moneyspent;
+        displayMoneyLeft.innerText=sum-moneyspent;
+    } else {
+         alert("You Cant add a item to list")
+    
     }
     
     
