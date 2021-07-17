@@ -79,7 +79,7 @@ function ItemToDisplay(){
             return  `<div class="item-name">
             <h5 class="name">${i.name}</h5>
             <h5 class="item-price">Rs ${i.price}</h5>
-            <i id="bin-icon"class="fas fa-trash-alt"></i>
+            
             </div>`
      
         })
@@ -97,3 +97,6 @@ function ItemToDisplay(){
     ItemInput.value="";
     ItemPriceInput.value="";
 }
+
+
+
