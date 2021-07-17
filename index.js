@@ -67,19 +67,19 @@ function ItemToDisplay(){
         price:getItemPrice
     }
 
-    itemArray.push(data);
+   
 
     var sum=getSalaryvalue;
 
     //console.log(itemArray);
 
     if(getSalaryvalue >= getItemPrice && sum != moneyspent && itemArray.length<4){
+        itemArray.push(data);
     ItemBoxContainer.innerHTML= itemArray.map((i)=>{
             
             return  `<div class="item-name">
             <h5 class="name">${i.name}</h5>
             <h5 class="item-price">Rs ${i.price}</h5>
-            
             </div>`
      
         })
