@@ -64,7 +64,7 @@ function ItemToDisplay(){
     const ItemBoxContainer=document.querySelector(".item-box-container");
     var data={
         name:getItemName,
-        price:getItemPrice
+        price:getItemPrice,
     }
 
    
@@ -73,7 +73,7 @@ function ItemToDisplay(){
 
     //console.log(itemArray);
 
-    if(getSalaryvalue >= getItemPrice && sum != moneyspent && itemArray.length<4){
+    if(getSalaryvalue >= getItemPrice  && itemArray.length<4){
         itemArray.push(data);
     ItemBoxContainer.innerHTML= itemArray.map((i)=>{
             
