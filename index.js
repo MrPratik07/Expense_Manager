@@ -73,7 +73,7 @@ function ItemToDisplay(){
 
     //console.log(itemArray);
 
-    if(sum != moneyspent && itemArray.length<4){
+    if(getSalaryvalue >= getItemPrice && sum != moneyspent && itemArray.length<4){
     ItemBoxContainer.innerHTML= itemArray.map((i)=>{
             
             return  `<div class="item-name">
